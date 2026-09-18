@@ -1,6 +1,6 @@
 ﻿import { getToken, clearAuth } from "./auth";
 
-const BASE = "/api";
+const BASE = import.meta.env.VITE_API_URL || "/api";
 
 function authHeaders() {
   const token = getToken();
@@ -88,18 +88,6 @@ export async function deleteDocument(id) {
   const res = await fetch(`${BASE}/documents/${id}`, {
     method: "DELETE",
     headers: { ...authHeaders() },
-  });
-  return handle(res);
-}
-
-export async function setDecision(id, decision) {
-  const res = await fetch(`${BASE}/documents/${id}/decision`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      ...authHeaders(),
-    },
-    body: JSON.stringify({ decision }),
   });
   return handle(res);
 }
