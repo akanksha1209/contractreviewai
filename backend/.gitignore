@@ -1,0 +1,9 @@
+﻿venv/
+__pycache__/
+*.pyc
+.env
+uploads/
+contracts.db
+ml_models/
+main_old_backup.py
+requirements_old_backup.txt

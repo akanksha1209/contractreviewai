@@ -1,7 +1,79 @@
-backend/venv/
-backend/__pycache__/
+﻿# ---------- Python ----------
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ---------- Virtualenvs ----------
+venv/
+ENV/
+env/
+backend/venv/
+backend/venv_old_py313/
+
+# ---------- Environment / secrets ----------
 .env
+backend/.env
+*.env
+!.env.example
+
+# ---------- Database ----------
+*.db
+*.sqlite3
+contracts.db
+backend/contracts.db
+
+# ---------- User-uploaded files ----------
+uploads/
+backend/uploads/
+test_docs/
+backend/test_docs/
+
+# ---------- Trained ML artefacts ----------
+ml_models/
+backend/ml_models/
+*.joblib
+
+# ---------- Backups / scratch files ----------
+backend/main_old_backup.py
+backend/requirements_old_backup.txt
+backend/diag_*.py
+backend/test_*.py
+backend/make_sample_contract*.py
+backend/migrate_*.py
+backend/generate_training_data.py
+
+# ---------- Node / frontend ----------
 node_modules/
+frontend/node_modules/
+frontend/dist/
+dist/
 .next/
+.vite/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ---------- IDE / OS ----------
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
