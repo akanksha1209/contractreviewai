@@ -1,0 +1,19 @@
+﻿services:
+  - type: web
+    name: contractreviewai-api
+    runtime: docker
+    plan: free
+    region: singapore
+    dockerfilePath: ./Dockerfile
+    dockerContext: ./
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: ACCESS_TOKEN_EXPIRE_MINUTES
+        value: "10080"
+      - key: DATABASE_URL
+        value: "sqlite:////data/contracts.db"
+      - key: UPLOAD_DIR
+        value: "/data/uploads"
+      - key: GEMINI_API_KEY
+        sync: false
